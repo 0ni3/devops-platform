@@ -1,22 +1,5 @@
 # devops-platform
 
-devops-platform/
-│
-├── app/                # Applicazione demo
-├── docker/             # Dockerfile e compose
-├── kubernetes/         # Manifest Kubernetes
-├── terraform/          # Infrastructure as Code
-├── ansible/            # Configurazione server
-├── monitoring/         # Prometheus, Grafana, Loki
-├── scripts/            # Script Bash
-├── docs/               # Documentazione
-├── .github/
-│   └── workflows/      # CI/CD
-│
-├── .gitignore
-├── LICENSE
-└── README.md
-
 A production-inspired DevOps platform built from scratch to improve and implement modern devops practices
 
 ## Overview
