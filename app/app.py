@@ -1,9 +1,9 @@
 from flask import Flask, jsonify
+import os
 
 app = Flask(__name__)
 
-VERSION = "1.0.0"
-
+VERSION = os.getenv("APP_VERSION", "1.0.0")
 
 @app.route("/")
 def home():

@@ -1,0 +1,25 @@
+services:
+
+  app:
+    image: devops-platform-app:1.0
+    container_name: devops-platform-app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - database
+
+  database:
+    image: postgres:16
+    container_name: devops-platform-db
+    environment:
+      POSTGRES_USER: devops
+      POSTGRES_PASSWORD: devops
+      POSTGRES_DB: platform
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+
+volumes:
+  postgres-data:
