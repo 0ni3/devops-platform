@@ -1,10 +1,16 @@
 services:
 
   app:
-    image: devops-platform-app:1.0
+    image: devops-platform-app:1.2
     container_name: devops-platform-app
     ports:
       - "8080:8080"
+    environment:
+      APP_VERSION: 1.1.0
+      DATABASE_HOST: database
+      DATABASE_NAME: platform
+      DATABASE_USER: devops
+      DATABASE_PASSWORD: devops
     depends_on:
       - database
 
